@@ -48,7 +48,7 @@
                             "items": [
                                 {
                                     "type": "TextBlock",
-                                    "text": "[View In Github](${url})",
+                                    "text": "[View In Github](${html_url})",
                                     "wrap": true
                                 }
                             ]

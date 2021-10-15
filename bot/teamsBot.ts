@@ -42,7 +42,8 @@ export class TeamsBot extends TeamsActivityHandler {
         }
         case "prs": {
           // Hard code to play around with github API. Need user login to obtain those information.
-          const octokit = new Octokit({ auth: `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` });
+          // Replace personal access token with OAuth Tokens.
+          const octokit = new Octokit({ auth: `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` });
           const response = await octokit.request('GET /repos/muyangamigo/gh-pr-helper/pulls', {
             owner: 'muyangamigo',
             repo: 'gh-pr-helper',
