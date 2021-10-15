@@ -1,6 +1,9 @@
 import { TeamsActivityHandler, CardFactory, TurnContext, Attachment, AdaptiveCardInvokeValue, AdaptiveCardInvokeResponse} from "botbuilder";
+import { Octokit } from "@octokit/core";
+
 const rawWelcomeCard = require("./adaptiveCards/welcome.json");
 const rawLearnCard = require("./adaptiveCards/learn.json");
+const rawPrCard = require("./adaptiveCards/listAllPrs.json");
 const ACData = require("adaptivecards-templating");
 
 export class TeamsBot extends TeamsActivityHandler {
@@ -37,12 +40,21 @@ export class TeamsBot extends TeamsActivityHandler {
           await context.sendActivity({ attachments: [card] });
           break;
         }
-        /**
-         * case "yourCommand": {
-         *   await context.sendActivity(`Add your response here!`);
-         *   break;
-         * }
-         */
+        case "prs": {
+          // Hard code to play around with github API. Need user login to obtain those information.
+          // Replace personal access token with OAuth Tokens.
+          const octokit = new Octokit({ auth: `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` });
+          const response = await octokit.request('GET /repos/muyangamigo/gh-pr-helper/pulls', {
+            owner: 'muyangamigo',
+            repo: 'gh-pr-helper',
+            state: 'all'
+          })
+          const data = {
+            "items": response.data}
+          const card = this.renderAdaptiveCard(rawPrCard, data);
+          await context.sendActivity({ attachments: [card] })
+          break;
+        }
       }
 
       // By calling next() you ensure that the next BotHandler is run.

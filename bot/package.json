@@ -21,7 +21,8 @@
     "botbuilder": "~4.14.0",
     "botbuilder-dialogs": "~4.14.0",
     "isomorphic-fetch": "^3.0.0",
-    "restify": "^8.5.1"
+    "restify": "^8.5.1",
+    "@octokit/core": "^3.5.1"
   },
   "devDependencies": {
     "@types/restify": "8.4.2",
