@@ -1,0 +1,37 @@
+{
+    "solution": {
+        "resourceNameSuffix": "7356c9",
+        "resourceGroupName": "chyuanGithubPRHelper-dev-rg",
+        "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+        "subscriptionId": "1756abc0-3554-4341-8d6a-46674962ea19",
+        "subscriptionName": "Teams Cloud - Dev Test with TTL = 7 Days",
+        "location": "East US",
+        "teamsAppTenantId": "{{solution.teamsAppTenantId}}",
+        "provisionSucceeded": true
+    },
+    "fx-resource-appstudio": {
+        "teamsAppId": "f055e9df-eab0-453f-ad07-b3bf7d780cb7"
+    },
+    "fx-resource-bot": {
+        "botId": "501e4645-2534-41e1-90a7-07725cc5c688",
+        "botPassword": "{{fx-resource-bot.botPassword}}",
+        "objectId": "a33a23ae-8a28-46a6-bc60-c8c8662eac73",
+        "validDomain": "githubprhedev5d73f4-bot-sites.azurewebsites.net",
+        "appServicePlan": "githubprhedev5d73f4-bot-serverfarms",
+        "botChannelReg": "githubprhedev5d73f4-bot-service",
+        "botWebAppResourceId": "/subscriptions/1756abc0-3554-4341-8d6a-46674962ea19/resourceGroups/chyuanGithubPRHelper-dev-rg/providers/Microsoft.Web/sites/githubprhedev5d73f4-bot-sites",
+        "siteName": "githubprhedev5d73f4-bot-sites",
+        "siteEndpoint": "https://githubprhedev5d73f4-bot-sites.azurewebsites.net",
+        "skuName": "B1"
+    },
+    "fx-resource-aad-app-for-teams": {
+        "clientId": "5576a75b-e5c4-49b2-b772-d848a68945cd",
+        "clientSecret": "{{fx-resource-aad-app-for-teams.clientSecret}}",
+        "objectId": "fd94ba0a-19e6-4f83-b60a-f71ea12e9f3d",
+        "oauth2PermissionScopeId": "6b8862a5-8f37-4ca6-acb4-223c06c0bcdc",
+        "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+        "oauthHost": "https://login.microsoftonline.com",
+        "oauthAuthority": "https://login.microsoftonline.com/72f988bf-86f1-41af-91ab-2d7cd011db47",
+        "applicationIdUris": "api://botid-501e4645-2534-41e1-90a7-07725cc5c688"
+    }
+}
