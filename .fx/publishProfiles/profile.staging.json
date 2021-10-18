@@ -14,7 +14,7 @@
     },
     "fx-resource-bot": {
         "botId": "3d06f389-5a74-4c0d-8e90-24682f92fd6f",
-        "botPassword": "{{fx-resource-bot.botPassword}}",
+        "botPassword": "fake",
         "objectId": "f4885f1e-58e6-41cf-9938-b6acd81511cb",
         "validDomain": "ghprhelperstaging-bot-sites.azurewebsites.net",
         "appServicePlan": "GhPrHelperStaging-bot-serverfarms",
@@ -26,7 +26,7 @@
     },
     "fx-resource-aad-app-for-teams": {
         "clientId": "5e052653-b1f3-4b28-8837-045196f573f5",
-        "clientSecret": "{{fx-resource-aad-app-for-teams.clientSecret}}",
+        "clientSecret": "fake",
         "objectId": "f4e53121-05a8-4a60-9fd8-c681c5dcacfe",
         "oauth2PermissionScopeId": "32d652b1-28ae-441a-8b41-32a37df666c6",
         "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
