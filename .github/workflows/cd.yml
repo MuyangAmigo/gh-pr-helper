@@ -9,7 +9,7 @@ on:
 jobs:
   deployToDev:
     name: Deploy to staging environment
-
+    envrionment: staging
     runs-on: ubuntu-latest
 
     env:
@@ -33,7 +33,11 @@ jobs:
         run: npm install
 
       - name: Provision
-        run: npx teamsfx provision --subscription ee788f54-a267-4d2f-bc9e-766957df46e5 --env staging
+        run: npx teamsfx provision --subscription ee788f54-a267-4d2f-bc9e-766957df46e5 --env staging2
+        env:
+          BOT_AAD_APP_SECRET: ${{secrets.BOT_AAD_APP_SECRET}}
+          M365_AAD_APP_SECRET: ${{secrets.M365_AAD_APP_SECRET}}
+
 
       - name: Deploy
         run: npx teamsfx deploy
