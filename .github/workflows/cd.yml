@@ -41,10 +41,10 @@ jobs:
 
 
       - name: Deploy
-        run: npx teamsfx deploy
+        run: npx teamsfx deploy --env staging
 
       - name: Package
-        run: npx teamsfx package
+        run: npx teamsfx package --env staging
       
       - name: Upload Teams App's package as artifact
         uses: actions/upload-artifact@v2
