@@ -20,6 +20,7 @@ jobs:
       M365_ACCOUNT_NAME: fxtest02@microsoft.com
       M365_ACCOUNT_PASSWORD: ${{secrets.M365_ACCOUNT_PASSWORD}}
       TEAMSFX_INSIDER_PREVIEW: true
+      CI_ENABLED: true
     
     steps:
       - uses: actions/setup-node@v2
